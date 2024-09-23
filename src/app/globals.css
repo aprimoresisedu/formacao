@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image {
+  background-image: url("/images/bg.webp");
+  background-position: right middle;
+  background-size: cover ;
+  background-repeat: no-repeat;
+}
+
+.btn-grad {
+  background-image: linear-gradient(180deg, #72d9ff 0%, #135192 100%);
+}
+.grad-01 {
+  background: linear-gradient(180deg, #000 0%, #00173b 40%, #00173b 80%, #000 100%)
+}
+.grad-02 {
+  background: linear-gradient(180deg, #c4ecf4 0%, #00173b 100%);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
