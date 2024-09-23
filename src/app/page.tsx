@@ -30,7 +30,7 @@ export default function Page() {
                             <p className="text-lg">Já é tão pouco tempo na hora da intercorrência, né? Cada segundo, cada minuto valem mais que ouro, valem a própria vida do seu paciente.</p>
                             <p className="text-lg">Se você já souber exatamente o que tem que fazer, como tem que fazer e em que ordem tem que fazer, quantas vidas a mais você poderia salvar?</p>
                             <p className="text-lg">Com esse Guia de Intercorrência Segura, é exatamente isso que as nossas +800 enfermeiras já tem, e é o que você também pode ter.</p>
-                            <p className="text-lg">Antes, elas ficavam inseguras. Agora, elas seguem um passo a passo comprovado, que deixa todas as outras enfermeiras pensando: “eu nunca vi uma enfermeira lidando com uma intercorrência tão bem assim!”.</p>
+                            <p className="text-lg">Antes, elas ficavam inseguras. Agora, elas seguem um passo a passo comprovado, que deixa todas as outras enfermeiras pensando: {"“"}eu nunca vi uma enfermeira lidando com uma intercorrência tão bem assim!{"”"}.</p>
                             <p className="text-lg">É esse tipo de segurança que você está buscando?</p>
                         </div>
                         <Button
@@ -198,7 +198,7 @@ export default function Page() {
                             />
                         </div>
                         <div className="flex flex-col items-center gap-6 bg-[#7FD9FF69] w-full max-w-xl py-12 px-4 sm:p-12 rounded-xl">
-                            <h2 className="text-2xl sm:text-4xl text-center font-bold text-[#c4ecf4]">"Mas, esse Guia é bom mesmo? Ele é tão barato..."</h2>
+                            <h2 className="text-2xl sm:text-4xl text-center font-bold text-[#c4ecf4]">{"“"}Mas, esse Guia é bom mesmo? Ele é tão barato...{"”"}</h2>
                             <div className="flex flex-col gap-4 text-center">
                                 <p className="text-white">Se ele não for bom, como nós vamos fazer você ter vontade de procurar a nossa Formação e nossa Pós em Urgência e Inovação?</p>
                                 <p className="text-white">Esse super desconto é uma forma de fazer você conhecer o DONA e entender o que faz nosso conteúdo gerar transformação para a sua atuação a beira leito!</p>
