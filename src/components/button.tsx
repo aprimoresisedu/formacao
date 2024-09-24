@@ -13,19 +13,32 @@ interface ButtonProps {
     }
 }
 
-export default function Button({ href, label, className, classNameB, searchParams}: ButtonProps) {
+export default function Button({ href, label, className, classNameB, searchParams }: ButtonProps) {
+
+    if (searchParams.utm_campaign) {
+        return (
+            <div className={`w-full flex ${className ? className : 'max-w-sm'}`}>
+                <a
+                    className={`btn-grad px-4 py-3 text-xl font-bold uppercase rounded-full ${classNameB}`}
+                    href={`https://chk.eduzz.com/2460920?
+                        utm_term=${searchParams.utm_term}
+                        &utm_campaign=${searchParams.utm_campaign}
+                        &utm_source=${searchParams.utm_source}
+                        &utm_content=${searchParams.utm_content}
+                        &utm_medium=${searchParams.utm_medium}
+                        `}
+
+                >{label}</a>
+            </div>
+        )
+    }
+
     return (
         <div className={`w-full flex ${className ? className : 'max-w-sm'}`}>
             <a
                 className={`btn-grad px-4 py-3 text-xl font-bold uppercase rounded-full ${classNameB}`}
-                href={`https://chk.eduzz.com/2460920?
-                    utm_term=${searchParams.utm_term}
-                    &utm_campaign=${searchParams.utm_campaign}
-                    &utm_source=${searchParams.utm_source}
-                    &utm_content=${searchParams.utm_content}
-                    &utm_medium=${searchParams.utm_medium}
-                    `}
-                    
+                href={`https://chk.eduzz.com/2460920`}
+
             >{label}</a>
         </div>
     )
