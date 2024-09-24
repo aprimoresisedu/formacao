@@ -4,14 +4,28 @@ interface ButtonProps {
     href: string
     className?: string
     classNameB?: string
+    searchParams: {
+        utm_content?: string
+        utm_campaign?: string
+        utm_term?: string
+        utm_source?: string
+        utm_medium?: string
+    }
 }
 
-export default function Button({ href, label, className, classNameB }: ButtonProps) {
+export default function Button({ href, label, className, classNameB, searchParams}: ButtonProps) {
     return (
-        <div className={`w-full flex ${className ? className :  'max-w-sm'}`}>
+        <div className={`w-full flex ${className ? className : 'max-w-sm'}`}>
             <a
                 className={`btn-grad px-4 py-3 text-xl font-bold uppercase rounded-full ${classNameB}`}
-                href={"https://chk.eduzz.com/2460920"}
+                href={`https://chk.eduzz.com/2460920?
+                    utm_term=${searchParams.utm_term}
+                    &utm_campaign=${searchParams.utm_campaign}
+                    &utm_source=${searchParams.utm_source}
+                    &utm_content=${searchParams.utm_content}
+                    &utm_medium=${searchParams.utm_medium}
+                    `}
+                    
             >{label}</a>
         </div>
     )

@@ -5,7 +5,17 @@ import Section from "@/components/section";
 import { Slider } from "@/components/slider";
 import Image from "next/image";
 
-export default function Page() {
+interface FormProps {
+    searchParams: {
+      utm_content?: string
+      utm_campaign?: string
+      utm_term?: string
+      utm_source?: string
+      utm_medium?: string
+    }
+  }
+
+export default function Page({ searchParams }: FormProps) {
     return (
         <>
             <Header />
@@ -34,6 +44,7 @@ export default function Page() {
                             <p className="text-lg">É esse tipo de segurança que você está buscando?</p>
                         </div>
                         <Button
+                            searchParams={searchParams}
                             href=""
                             label="Quero acesso ao guia de intercorrência"
                             className="text-white max-w-full flex justify-center"
@@ -98,6 +109,7 @@ export default function Page() {
                                     </li>
                                 </ul>
                                 <Button
+                                    searchParams={searchParams}
                                     href=""
                                     label="Liberar meu guia agora"
                                     className="max-w-full flex justify-center"
@@ -142,6 +154,7 @@ export default function Page() {
                                     </li>
                                 </ul>
                                 <Button
+                                    searchParams={searchParams}
                                     href=""
                                     label="Liberar meu guia agora"
                                     className="max-w-full flex justify-center"
@@ -162,6 +175,7 @@ export default function Page() {
                                 </div>
                                 <hr className="w-full bg-white" />
                                 <Button
+                                    searchParams={searchParams}
                                     href=""
                                     label="Liberar meu guia agora"
                                     className="text-white max-w-full"
@@ -191,6 +205,7 @@ export default function Page() {
                             </div>
                             <hr className="w-full bg-white" />
                             <Button
+                                searchParams={searchParams}
                                 href=""
                                 label="Liberar meu guia agora"
                                 className="text-white max-w-full"
@@ -206,6 +221,7 @@ export default function Page() {
                             </div>
                             <hr className="w-full bg-white" />
                             <Button
+                                searchParams={searchParams}
                                 href=""
                                 label="Liberar meu guia agora"
                                 className="text-white max-w-full"
