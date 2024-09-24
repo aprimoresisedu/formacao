@@ -37,7 +37,13 @@ export default function Button({ href, label, className, classNameB, searchParam
         <div className={`w-full flex ${className ? className : 'max-w-sm'}`}>
             <a
                 className={`btn-grad px-4 py-3 text-xl font-bold uppercase rounded-full ${classNameB}`}
-                href={`https://chk.eduzz.com/2460920`}
+                href={`https://chk.eduzz.com/2460920?
+                    utm_term=${'nao-treaqueado'}
+                    &utm_campaign=${'nao-treaqueado'}
+                    &utm_source=${'nao-treaqueado'}
+                    &utm_content=${'nao-treaqueado'}
+                    &utm_medium=${'nao-treaqueado'}
+                    `}
 
             >{label}</a>
         </div>
