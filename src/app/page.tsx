@@ -18,7 +18,9 @@ interface FormProps {
 export default function Page({ searchParams }: FormProps) {
     return (
         <>
-            <Header />
+            <Header 
+                searchParams={searchParams}
+            />
             <main className="">
                 <Section classNameS="px-4 grad-01" className="py-12 sm:py-24">
                     <div className="flex flex-col gap-12 text-center">

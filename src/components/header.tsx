@@ -2,10 +2,16 @@ import Image from "next/image"
 import Button from "./button"
 
 interface HeaderProps {
-
+    searchParams: {
+        utm_content?: string
+        utm_campaign?: string
+        utm_term?: string
+        utm_source?: string
+        utm_medium?: string
+    }
 }
 
-export default function Header({ }: HeaderProps) {
+export default function Header({ searchParams }: HeaderProps) {
     return (
         <header className="h-screen bg-image flex items-center justify-center border-b-4 border-[#c4ecf4] px-4">
             <div className="w-full max-w-7xl sm:grid sm:grid-cols-2 flex flex-col">
@@ -22,6 +28,7 @@ export default function Header({ }: HeaderProps) {
                     <p className="">Guia com <strong>20 anos de experiência prática</strong> em plantões para você saber como executar a Avaliação Inicial, Secundária e a Abordagem Sistemática.</p>
                     <div className="w-full max-w-sm flex flex-col gap-4 items-center">
                         <Button
+                            searchParams={searchParams}
                             href=""
                             label="Sim, quero o guia comprovado"
                         />
