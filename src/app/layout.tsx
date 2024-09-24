@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "2 Avisos Importantes",
+  title: "Guia: Intercorrência segura",
   description: "",
 };
 
