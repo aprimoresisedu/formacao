@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMHLWBJ2"
           height="0" width="0"></iframe></noscript>
         {children}
+        <Analytics />
       </body>
     </html>
   );
