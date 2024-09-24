@@ -5,8 +5,8 @@ import "./globals.css";
 const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Despertar de uma Nova História - Marinalva Callegario",
-  description: "Despertar de uma Nova História",
+  title: "2 Avisos Importantes",
+  description: "",
 };
 
 export default function RootLayout({
