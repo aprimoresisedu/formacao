@@ -7,7 +7,7 @@ const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Guia: Intercorrência Segura",
-  description: "",
+  description: "", 
 };
 
 export default function RootLayout({
