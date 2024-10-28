@@ -1,6 +1,6 @@
-import Button from "@/components/button";
+import ButtonT2 from "@/components/buttonT2";
 import Dropdown from "@/components/dropdown";
-import Header from "@/components/header";
+import HeaderT2 from "@/components/headerT2";
 import Section from "@/components/section";
 import { Slider } from "@/components/slider";
 import Image from "next/image";
@@ -18,8 +18,8 @@ interface FormProps {
 export default function Page({ searchParams }: FormProps) {
     return (
         <>
-            <Header
-                price="10,00"
+            <HeaderT2
+                price="37,00"
                 searchParams={searchParams}
             />
             <main className="">
@@ -46,7 +46,7 @@ export default function Page({ searchParams }: FormProps) {
                             <p className="text-lg">Antes, elas ficavam inseguras. Agora, elas seguem um passo a passo comprovado, que deixa todas as outras enfermeiras pensando: {"“"}eu nunca vi uma enfermeira lidando com uma intercorrência tão bem assim!{"”"}.</p>
                             <p className="text-lg">É esse tipo de segurança que você está buscando?</p>
                         </div>
-                        <Button
+                        <ButtonT2
                             searchParams={searchParams}
                             href=""
                             label="Quero acesso ao guia de intercorrência"
@@ -111,7 +111,7 @@ export default function Page({ searchParams }: FormProps) {
                                         <p className="border-b border-white/20 pb-4">Como utilizar o Sistema SAMPLE para avaliar todo o histórico clínico do paciente</p>
                                     </li>
                                 </ul>
-                                <Button
+                                <ButtonT2
                                     searchParams={searchParams}
                                     href=""
                                     label="Liberar meu guia agora"
@@ -156,7 +156,7 @@ export default function Page({ searchParams }: FormProps) {
                                         <p className="border-b border-white/20 pb-4">Conversar de igual pra igual com o colega médico e toda a equipe multi</p>
                                     </li>
                                 </ul>
-                                <Button
+                                <ButtonT2
                                     searchParams={searchParams}
                                     href=""
                                     label="Liberar meu guia agora"
@@ -174,10 +174,10 @@ export default function Page({ searchParams }: FormProps) {
                                 <p className="px-4 py-2 border border-[#c4ecf4] rounded-full text-lg text-white font-semibold text-center">Adquira agora</p>
                                 <div className="flex flex-col text-center">
                                     <p className="text-base text-white">de <span className="line-through text-red-500 font-semibold">R$97,00</span> por apenas</p>
-                                    <p className="text-5xl font-bold text-white">R$10,00</p>
+                                    <p className="text-5xl font-bold text-white">R$37,00</p>
                                 </div>
                                 <hr className="w-full bg-white" />
-                                <Button
+                                <ButtonT2
                                     searchParams={searchParams}
                                     href=""
                                     label="Liberar meu guia agora"
@@ -207,7 +207,7 @@ export default function Page({ searchParams }: FormProps) {
                                 <p className="text-white">0 riscos para você conferir com os seus próprios olhos o quanto esse Guia vai te ajudar no seu dia a dia de plantão!</p>
                             </div>
                             <hr className="w-full bg-white" />
-                            <Button
+                            <ButtonT2
                                 searchParams={searchParams}
                                 href=""
                                 label="Liberar meu guia agora"
@@ -223,7 +223,7 @@ export default function Page({ searchParams }: FormProps) {
                                 <p className="text-white">O objetivo é que você consiga ter mais segurança na sua atuação. E, se você quiser uma ajuda para ter alguém do seu lado pegando na sua mão, nós vamos poder te ajudar!</p>
                             </div>
                             <hr className="w-full bg-white" />
-                            <Button
+                            <ButtonT2
                                 searchParams={searchParams}
                                 href=""
                                 label="Liberar meu guia agora"
