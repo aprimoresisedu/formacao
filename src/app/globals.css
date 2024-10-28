@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-image {
-  background-image: url("/images/bg.webp");
+  background-image: url("/images/bg.webp"); 
   background-position: right middle; 
   background-size: cover ;
   background-repeat: no-repeat;
