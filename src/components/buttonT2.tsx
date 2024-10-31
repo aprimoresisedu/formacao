@@ -30,7 +30,7 @@ export default function ButtonT2({ href, label, className, classNameB, searchPar
     return (
         <div className={`w-full flex ${className ? className : 'max-w-sm'}`}>
             <a
-                className={` border-8 border-[#608c98]/60  bg-[#00c9ff] px-4 py-3 text-xl font-bold uppercase rounded-full ${classNameB}`}
+                className={` border-8 border-[#608c98]/60  bg-[#00c9ff] px-4 py-2 text-xl font-bold uppercase rounded-full ${classNameB}`}
                 href={`https://chk.eduzz.com/2460920?utm_term=${'nao-treaqueado'}&utm_campaign=${'nao-treaqueado'}&utm_source=FacebookAds-p3&utm_content=${'nao-treaqueado'}&utm_medium=${'nao-treaqueado'}`}
             >{label}</a>
         </div>
