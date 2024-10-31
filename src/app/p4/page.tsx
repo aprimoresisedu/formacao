@@ -174,7 +174,7 @@ export default function Page({ searchParams }: FormProps) {
                                 <p className="px-4 py-2 border border-[#c4ecf4] rounded-full text-lg text-white font-semibold text-center">Adquira agora</p>
                                 <div className="flex flex-col text-center">
                                     <p className="text-base text-white">de <span className="line-through text-red-500 font-semibold">R$97,00</span> por apenas</p>
-                                    <p className="text-5xl font-bold text-white">R$37,00</p>
+                                    <p className="text-5xl font-bold text-white">R$10,00</p>
                                 </div>
                                 <hr className="w-full bg-white" />
                                 <ButtonT2
