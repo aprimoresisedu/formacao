@@ -19,7 +19,7 @@ export default function Page({ searchParams }: FormProps) {
     return (
         <>
             <HeaderT2
-                price="37,00"
+                price="10,00"
                 searchParams={searchParams}
             />
             <main className="">

@@ -25,13 +25,13 @@ export default function HeaderT2({ searchParams, price }: HeaderProps) {
                             objectFit="contain"
                         />
                     </div>
-                    <h1 className="text-2xl sm:text-3xl font-bold">Tenha conhecimento para se sentir uma enfermeira segura na atuação nas intercorrências</h1>
-                    <p className="">Guia com <strong>20 anos de experiência prática</strong> em plantões para você saber como executar a Avaliação Inicial, Secundária e a Abordagem Sistemática.</p>
+                    <h1 className="text-2xl sm:text-3xl font-bold">Guia de Intercorrência com conhecimento prático de +20 anos de experiência para você ter segurança na atuação como enfermeira</h1>
+                    <p className="">Na faculdade, nos ensinam muita teoria, mas e na prática? Este Guia vai te mostrar <strong>todo o passo a passo</strong> para você saber <strong>executar com segurança</strong> a Avaliação Inicial, Secundária e a Abordagem.</p>
                     <div className="w-full max-w-sm flex flex-col gap-4 items-center">
                         <ButtonT2
                             searchParams={searchParams}
                             href=""
-                            label="Liberar meu guia agora"
+                            label="RESGATAR MEU GUIA PRÁTICO"
                             classNameB="w-full max-w-xl text-center"
                         />
                         <div className="flex flex-col text-center">
