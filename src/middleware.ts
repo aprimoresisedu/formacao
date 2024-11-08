@@ -5,7 +5,8 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
-  const randomRoute = Math.random() < 0.5 ? '/p3' : '/p4';
+  // const randomRoute = Math.random() < 0.5 ? '/p3' : '/p4';
+  const randomRoute = '/p4';
 
   // Verifique se está na rota inicial para redirecionamento
   if (url.pathname === '/') {
