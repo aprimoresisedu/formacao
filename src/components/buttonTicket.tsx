@@ -10,7 +10,7 @@ interface ButtonProps {
         utm_term?: string
         utm_source?: string
         utm_medium?: string
-    }
+    } 
 }
 
 export default function ButtonTicket({ href, label, className, classNameB, searchParams }: ButtonProps) {
