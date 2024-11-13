@@ -13,7 +13,7 @@ interface ButtonProps {
     } 
 }
 
-export default function ButtonTicket({ href, label, className, classNameB, searchParams }: ButtonProps) {
+export default function ButtonTicket({ href, label, className, classNameB, searchParams }: ButtonProps) { 
 
     if (searchParams.utm_campaign) {
         return (
