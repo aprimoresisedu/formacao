@@ -1,5 +1,5 @@
 
-interface ButtonProps {
+interface ButtonProps { 
     label: string
     href: string
     className?: string
