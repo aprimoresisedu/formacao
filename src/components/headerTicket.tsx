@@ -28,16 +28,16 @@ export default function HeaderTicket({ searchParams, price }: HeaderProps) {
                     <h1 className="text-2xl sm:text-3xl font-bold">Guia de Intercorrência com conhecimento prático de +20 anos de experiência para você ter segurança na atuação como enfermeira</h1>
                     <p className="">Na faculdade, nos ensinam muita teoria, mas e na prática? Este Guia vai te mostrar <strong>todo o passo a passo</strong> para você saber <strong>executar com segurança</strong> a Avaliação Inicial, Secundária e a Abordagem.</p>
                     <div className="w-full max-w-sm flex flex-col gap-4 items-center">
-                        <ButtonTicket
-                            searchParams={searchParams}
-                            href=""
-                            label="RESGATAR MEU GUIA PRÁTICO"
-                            classNameB="w-full max-w-xl text-center"
-                        />
                         <div className="flex flex-col text-center">
                             <p className="text-base">de <span className="line-through text-red-500 font-semibold">R$97,00</span> por apenas</p>
                             <p className="text-5xl font-bold text-[#c4ecf4]">R${price}</p>
                         </div>
+                        <ButtonTicket
+                            searchParams={searchParams}
+                            href=""
+                            label="RESGATAR MEU GUIA"
+                            classNameB="w-full max-w-xl text-center"
+                        />
                     </div>
                 </div>
             </div>

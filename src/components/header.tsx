@@ -28,16 +28,16 @@ export default function Header({ searchParams, price }: HeaderProps) {
                     <h1 className="text-2xl sm:text-3xl font-bold">Tenha conhecimento para se sentir uma enfermeira segura na atuação nas intercorrências</h1>
                     <p className="">Guia com <strong>20 anos de experiência prática</strong> em plantões para você saber como executar a Avaliação Inicial, Secundária e a Abordagem Sistemática.</p>
                     <div className="w-full max-w-sm flex flex-col gap-4 items-center">
-                        <Button
-                            searchParams={searchParams}
-                            href=""
-                            label="Liberar meu guia agora"
-                            classNameB="w-full max-w-xl text-center"
-                        />
                         <div className="flex flex-col text-center">
                             <p className="text-base">de <span className="line-through text-red-500 font-semibold">R$97,00</span> por apenas</p>
                             <p className="text-5xl font-bold text-[#c4ecf4]">R${price}</p>
                         </div>
+                        <Button
+                            searchParams={searchParams}
+                            href=""
+                            label="Liberar meu guia"
+                            classNameB="w-full max-w-xl text-center"
+                        />
                     </div>
                 </div>
             </div>
