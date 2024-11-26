@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
   const randomRoute = Math.random() < 0.5 ? '/p5' : '/p4';
   // const randomRoute = '/p4';
 
-  // Verifique se está na rota inicial para redirecionamento
+  // Verifique se está na rota inicial para redirecionamento 
   if (url.pathname === '/') {
     url.pathname = randomRoute;
     url.searchParams.set('utm_source', randomRoute.replace('/', `FacebookAds-`))
