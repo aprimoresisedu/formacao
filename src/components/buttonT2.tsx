@@ -33,7 +33,7 @@ export default function ButtonT2({ href, label, className, classNameB, searchPar
             <a
                 // className={` border-8 border-[#608c98]/60  bg-[#00c9ff] px-4 py-2 text-xl font-bold uppercase rounded-full ${classNameB}`}
                 className={` border-8 border-[#608c98]/60  bg-gradient-to-b from-red-500 to-red-600 px-4 py-2 text-xl font-bold uppercase rounded-full ${classNameB}`}
-                href={`https://chk.eduzz.com/2460920?utm_term=${'nao-treaqueado'}&utm_campaign=${'nao-treaqueado'}&utm_source=${'nao-traqueado'}&utm_content=${'nao-treaqueado'}&utm_medium=${'nao-treaqueado'}`}
+                href={`https://chk.eduzz.com/2460920?utm_term=${'nao-treaqueado'}&utm_campaign=${'nao-treaqueado'}&utm_source=${searchParams.utm_source}&utm_content=${'nao-treaqueado'}&utm_medium=${'nao-treaqueado'}`}
             >{label}</a>
         </div>
     )
