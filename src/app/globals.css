@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 .bg-image {
   background-image: url("/images/bg.webp"); 
   background-position: right middle;  
@@ -17,6 +21,10 @@
 }
 .grad-02 {
   background: linear-gradient(180deg, #c4ecf4 0%, #00173b 100%);
+}
+
+.radial-01 {
+  background: radial-gradient(circle, #062b67 0%, #00173b 100%);
 }
 
 .swiper {
