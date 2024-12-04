@@ -22,7 +22,7 @@ export default function Page() {
 
     return (
         <>
-            <header className="relative min-h-screen sm:h-screen w-full flex sm:items-center justify-center radial-01 pt-12 sm:pt-0 px-4">
+            <header className="relative  sm:h-screen w-full flex sm:items-center justify-center radial-01 pt-12 sm:pt-0 px-4">
                 <div className="w-full max-w-7xl flex justify-center">
                     <div className="w-full flex flex-col items-center text-center gap-4">
                         <div className="relative sm:w-[162px] sm:h-[60px] w-[124px] h-[42px]">
@@ -68,7 +68,7 @@ export default function Page() {
                                 <p className="">Se você tem interesse em se candidatar a uma vaga, basta preencher o formulário abaixo:</p>
                             </li>
                         </ul>
-                        <Link className="bg-white hover:animate-pulse text-black rounded-xl py-4 px-8 w-full sm:max-w-lg text-center font-semibold" href="#forms">Quero meu bônus gratuito</Link>
+                        <Link className="bg-emerald-300 border-8 border-emerald-500 hover:animate-pulse text-black rounded-xl py-4 px-8 w-full sm:max-w-lg text-center font-semibold" href="#forms">Quero meu bônus gratuito</Link>
                     </div>
                     <div className="flex flex-col items-center gap-8">
                         <h2 className="font-bold text-xl sm:text-3xl text-center max-w-3xl text-white ">Veja o que nossas alunas falam de nós:</h2>
