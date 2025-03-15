@@ -256,7 +256,7 @@ export default function Page({ searchParams }: FormProps) {
                                     <h5 className="uppercase"><strong>7 dias</strong> de garantia incondicional</h5>
                                     <Button
                                         searchParams={searchParams}
-                                        href="#inscricao"
+                                        href=""
                                         label="Quero fazer parte!"
                                         classNameB="w-full max-w-xl text-center"
                                     />
