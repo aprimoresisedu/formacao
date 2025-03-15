@@ -1,23 +1,27 @@
 import Image from "next/image"
 import Button from "./button"
+import { ReactNode } from "react"
 
 interface HeaderProps {
     searchParams: {
         utm_content?: string
         utm_campaign?: string
         utm_term?: string
-        utm_source?: string 
+        utm_source?: string
         utm_medium?: string
     }
     price: string
+    title: ReactNode
+    subtitle: ReactNode
+    items: string[]
 }
 
-export default function Header({ searchParams, price }: HeaderProps) {
+export default function Header({ searchParams, price, title, subtitle, items }: HeaderProps) {
     return (
-        <header className="h-screen bg-image flex items-center justify-center border-b-4 border-[#c4ecf4] px-4">
+        <header className="sm:h-screen h-[1000px] bg-image flex sm:items-center justify-center border-b-4 border-[#c4ecf4] px-4 sm:pt-0 pt-12">
             <div className="w-full max-w-7xl sm:grid sm:grid-cols-2 flex flex-col">
                 <div className="w-full max-w-xl flex flex-col gap-4 text-white sm:text-left text-center sm:items-start items-center">
-                    <div className="relative w-[162px] h-[60px] sm:w-[240px] sm:h-[90px]">
+                    <div className="relative w-[124px] h-[60px] sm:w-[124px] sm:h-[90px]">
                         <Image
                             src="/images/logo.webp"
                             alt=""
@@ -25,17 +29,24 @@ export default function Header({ searchParams, price }: HeaderProps) {
                             objectFit="contain"
                         />
                     </div>
-                    <h1 className="text-2xl sm:text-3xl font-bold">Tenha conhecimento para se sentir uma enfermeira segura na atuação nas intercorrências</h1>
-                    <p className="">Guia com <strong>20 anos de experiência prática</strong> em plantões para você saber como executar a Avaliação Inicial, Secundária e a Abordagem Sistemática.</p>
+                    <h1 className="text-2xl sm:text-3xl font-bold">{title}</h1>
+                    <p className="">{subtitle}</p>
+                    {items.length > 0 && (
+                        <ul>
+                            {items.map((item: string, index: number) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    )}
                     <div className="w-full max-w-sm flex flex-col gap-4 items-center">
-                        <div className="flex flex-col text-center">
+                        {/* <div className="flex flex-col text-center">
                             <p className="text-base">de <span className="line-through text-red-500 font-semibold">R$97,00</span> por apenas</p>
                             <p className="text-5xl font-bold text-[#c4ecf4]">R${price}</p>
-                        </div>
+                        </div> */}
                         <Button
                             searchParams={searchParams}
-                            href=""
-                            label="Liberar meu guia"
+                            href="#inscricao"
+                            label="Quero fazer parte"
                             classNameB="w-full max-w-xl text-center"
                         />
                     </div>

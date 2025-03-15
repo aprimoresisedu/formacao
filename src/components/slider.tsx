@@ -37,10 +37,10 @@ export function Slider() {
                         slidesPerView: 1
                     }
                 }}
-                className="mySwiper flex items-center"
+                className="mySwiper swp-1 flex items-center"
             >
                 <SwiperSlide className="swiper-slide">
-                    <div className="relative w-full h-[400px]">
+                    <div className="relative w-full h-[364px]">
                         <Image
                             src="/images/dep1.png"
                             alt=""
@@ -50,7 +50,7 @@ export function Slider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
-                    <div className="relative w-full h-[400px]">
+                    <div className="relative w-full h-[364px]">
                         <Image
                             src="/images/dep2.png"
                             alt=""
@@ -60,7 +60,7 @@ export function Slider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
-                    <div className="relative w-full h-[400px]">
+                    <div className="relative w-full h-[364px]">
                         <Image
                             src="/images/dep3.png"
                             alt=""
@@ -70,7 +70,7 @@ export function Slider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
-                    <div className="relative w-full h-[400px]">
+                    <div className="relative w-full h-[364px]">
                         <Image
                             src="/images/dep1.png"
                             alt=""
@@ -80,7 +80,7 @@ export function Slider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
-                    <div className="relative w-full h-[400px]">
+                    <div className="relative w-full h-[364px]">
                         <Image
                             src="/images/dep2.png"
                             alt=""
@@ -90,7 +90,7 @@ export function Slider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
-                    <div className="relative w-full h-[400px]">
+                    <div className="relative w-full h-[364px]">
                         <Image
                             src="/images/dep3.png"
                             alt=""
