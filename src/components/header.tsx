@@ -46,7 +46,7 @@ export default function Header({ searchParams, price, title, subtitle, items }: 
                         <Button
                             searchParams={searchParams}
                             href="#inscricao"
-                            label="Quero fazer parte"
+                            label="Quero ver valores"
                             classNameB="w-full max-w-xl text-center"
                         />
                     </div>

@@ -104,7 +104,7 @@ export default function Page({ searchParams }: FormProps) {
                         <Button
                             searchParams={searchParams}
                             href="#inscricao"
-                            label="quero fazer parte"
+                            label="QUERO VER VALORES"
                             className="text-white max-w-full flex justify-center px-12"
                         />
                     </div>
@@ -163,7 +163,7 @@ export default function Page({ searchParams }: FormProps) {
                             <Button
                                 searchParams={searchParams}
                                 href="#inscricao"
-                                label="quero fazer parte"
+                                label="QUERO VER VALORES"
                                 className="max-w-full flex justify-center"
                             />
                         </div>
@@ -211,7 +211,7 @@ export default function Page({ searchParams }: FormProps) {
                                 <Button
                                     searchParams={searchParams}
                                     href="#inscricao"
-                                    label="quero fazer parte"
+                                    label="QUERO VER VALORES"
                                     className="max-w-full flex justify-center"
                                 />
                             </div>
@@ -248,16 +248,16 @@ export default function Page({ searchParams }: FormProps) {
                                     <div>
                                         <h5 className="flex items-end">
                                             <span className="text-lg">12x</span>
-                                            <span className="text-5xl font-bold">R$200,00</span>
+                                            <span className="text-5xl font-bold">R$59,70</span>
                                         </h5>
-                                        <p className="text-lg text-white/80">Ou R$ 2.000,00 à vista</p>
+                                        <p className="text-lg text-white/80">Ou R$ 597,00 à vista</p>
                                     </div>
                                     <hr className="w-full border border-white/20" />
                                     <h5 className="uppercase"><strong>7 dias</strong> de garantia incondicional</h5>
                                     <Button
                                         searchParams={searchParams}
                                         href=""
-                                        label="Quero fazer parte!"
+                                        label="Quero me matricular!"
                                         classNameB="w-full max-w-xl text-center"
                                     />
                                     <div className="relative w-[124px] h-[60px] sm:w-[224px] sm:h-[96px]">
@@ -291,7 +291,7 @@ export default function Page({ searchParams }: FormProps) {
                             <Button
                                 searchParams={searchParams}
                                 href="#inscricao"
-                                label="quero fazer parte"
+                                label="Quero ver valores"
                                 className="text-white max-w-full"
                                 classNameB="text-white w-full text-center"
                             />
