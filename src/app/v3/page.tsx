@@ -256,7 +256,7 @@ export default function Page({ searchParams }: FormProps) {
                                     <h5 className="uppercase"><strong>7 dias</strong> de garantia incondicional</h5>
                                     <Button
                                         searchParams={searchParams}
-                                        href=""
+                                        href="https://wa.me/5584996206183?text=C%C3%A9sar%2C%20estou%20vindo%20da%20p%C3%A1gina%20e%20quero%20me%20matricular%20na%20Forma%C3%A7%C3%A3o%20DONA!"
                                         label="Quero me matricular!"
                                         classNameB="w-full max-w-xl text-center"
                                     />
