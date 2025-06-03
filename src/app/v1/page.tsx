@@ -248,9 +248,9 @@ export default function Page({ searchParams }: FormProps) {
                                     <div>
                                         <h5 className="flex items-end">
                                             <span className="text-lg">12x</span>
-                                            <span className="text-5xl font-bold">R$59,70</span>
+                                            <span className="text-5xl font-bold">R$99,70</span>
                                         </h5>
-                                        <p className="text-lg text-white/80">Ou R$ 597,00 à vista</p>
+                                        <p className="text-lg text-white/80">Ou R$ 997,00 à vista</p>
                                     </div>
                                     <hr className="w-full border border-white/20" />
                                     <h5 className="uppercase"><strong>7 dias</strong> de garantia incondicional</h5>
