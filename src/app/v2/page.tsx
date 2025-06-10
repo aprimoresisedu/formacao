@@ -325,7 +325,7 @@ export default function Page({ searchParams }: FormProps) {
                         <h2 className="text-2xl sm:text-4xl font-bold text-black text-center">Perguntas Frequentes</h2>
                         <div className="flex flex-col w-full max-w-3xl gap-4">
                             <Dropdown title="Plano de assinatura">
-                                <p>Faça parte da maior formação para enfermeiras e assine nosso plano por apenas 12x de R$ 59,70.</p>
+                                <p>Faça parte da maior formação para enfermeiras e assine nosso plano por apenas 12x de R$ 99,70.</p>
                                 <p>Você terá acesso a todas as aulas gravadas, Elegibilidade da Certificação pelo MEC ao final do curso, materiais de apoio e as trilhas de aprendizagem individual.</p>
                                 <p>Lembrando que a cobrança ocorre anualmente, mas você pode parcelar esse valor em até doze vezes sem juros no cartão.</p>
                             </Dropdown>
@@ -341,7 +341,7 @@ export default function Page({ searchParams }: FormProps) {
                                 <p>Se tiver alguma dúvida, não se preocupe, o nosso suporte está sempre disposto a ajudar da melhor maneira. É só enviar um e-mail para: contato@aprimresisedu.com.</p>
                             </Dropdown>
                             <Dropdown title="E se eu não gostar?">
-                                <p>Você tem 7 dias para conferir o conteúdo do Guia e decidir se ele é para você ou não.</p>
+                                <p>Você tem 7 dias para conferir o conteúdo da Formação e decidir se ela é para você ou não.</p>
                                 <p>Isso significa que se, por qualquer razão, você não estiver completamente satisfeita com o material, basta entrar em contato conosco dentro desse período e nós devolveremos 100% do seu dinheiro, sem perguntas nem burocracias. O risco é zero.</p>
                             </Dropdown>
                             <Dropdown title="Por quais aulas começar?">
