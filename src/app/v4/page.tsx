@@ -256,23 +256,23 @@ export default function Page({ searchParams }: FormProps) {
                                 <p className="max-w-2xl text-lg font-medium text-white text-center">Apresento o <strong>Método DONA do Plantão</strong>, com os 4 pilares que fazem o mercado parar e olhar pra você:</p>
                                 <ul className="relative w-full h-[800px] sm:h-[700px] flex flex-col justify-center sm:items-center gap-6">
                                     <li className="bg-[#441348] px-4 py-2 rounded absolute -top-[39px] z-50 font-extrabold">D.O.N.A</li>
-                                    <li className="sm:absolute flex translate-x-[8%] w-[90%] sm:w-[390px] top-[25px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
-                                        <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] z-[999]" />
+                                    <li className="sm:absolute left-0 flex translate-x-[8%] sm:translate-x-0 w-[90%] sm:w-[390px] top-[25px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
+                                        <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] sm:left-auto z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">D</h5>
                                         <p className="text-zinc-300">Domine técnicas e conteúdos: Aprenda o que ninguém ensina sobre raciocínio clínico, fluxogramas e atuação segura.</p>
                                     </li>
-                                    <li className="sm:absolute flex translate-x-[8%] sm:right-0 top-[185px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
+                                    <li className="sm:absolute flex translate-x-[8%] sm:translate-x-0 sm:right-0 top-[185px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-left-[39px] z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">O</h5>
                                         <p className="text-zinc-300">Organize e lidere a sua equipe: Liderança prática, delegação de funções e engajamento de equipe.</p>
                                     </li>
                                     <li className="absolute h-full w-4 bg-[#441348] border-x-[4px] border-[#310c34]"></li>
-                                    <li className="sm:absolute flex translate-x-[8%] top-[345px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
-                                        <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] z-[999]" />
+                                    <li className="sm:absolute left-0 flex translate-x-[8%] sm:translate-x-0 top-[345px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
+                                        <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] sm:left-auto z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">N</h5>
                                         <p className="text-zinc-300">Organize e lidere a sua equipe: Liderança prática, delegação de funções e engajamento de equipe.</p>
                                     </li>
-                                    <li className="sm:absolute flex translate-x-[8%] sm:right-0 bottom-[25px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
+                                    <li className="sm:absolute flex translate-x-[8%] sm:translate-x-0 sm:right-0 bottom-[25px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-left-[39px] z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">A</h5>
                                         <p className="text-zinc-300">Organize e lidere a sua equipe: Liderança prática, delegação de funções e engajamento de equipe.</p>
