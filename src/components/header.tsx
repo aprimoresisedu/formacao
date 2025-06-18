@@ -14,9 +14,10 @@ interface HeaderProps {
     title: ReactNode
     subtitle: ReactNode
     items: string[]
+    btn?: boolean
 }
 
-export default function Header({ searchParams, price, title, subtitle, items }: HeaderProps) {
+export default function Header({ searchParams, price, title, subtitle, items, btn }: HeaderProps) {
     return (
         <header className="sm:h-screen h-[1000px] bg-image flex sm:items-center justify-center border-b-4 border-[#c4ecf4] px-4 sm:pt-0 pt-12">
             <div className="w-full max-w-7xl sm:grid sm:grid-cols-2 flex flex-col">
@@ -43,12 +44,14 @@ export default function Header({ searchParams, price, title, subtitle, items }: 
                             <p className="text-base">de <span className="line-through text-red-500 font-semibold">R$97,00</span> por apenas</p>
                             <p className="text-5xl font-bold text-[#c4ecf4]">R${price}</p>
                         </div> */}
-                        <Button
-                            searchParams={searchParams}
-                            href="#inscricao"
-                            label="Quero ver valores"
-                            classNameB="w-full max-w-xl text-center"
-                        />
+                        {!btn && (
+                            <Button
+                                searchParams={searchParams}
+                                href="#inscricao"
+                                label="Quero ver valores"
+                                classNameB="w-full max-w-xl text-center"
+                            />
+                        )}
                     </div>
                 </div>
             </div>

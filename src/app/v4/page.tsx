@@ -26,9 +26,9 @@ export default function Page({ searchParams }: FormProps) {
     ]
 
     const assinaturaListItems = [
+        'Trilha de Valorização de Carreira: conteúdos práticos para conseguir emprego ou subir de cargo',
         'Trilha de Atuação 100% Segura: conteúdos práticos com passo a passo comprovado',
         'Trilha de Referência na Liderança: conteúdos práticos para liderar qualquer time',
-        'Trilha de Valorização de Carreira: conteúdos práticos para conseguir emprego ou subir de cargo',
         'Elegibilidade de emissão de Certificado reconhecido pelo MEC como Curso de Aperfeiçoamento',
         'Bônus: Materclass do Plantão ao Consultório',
         'Bônus: Masterclass Educação Financeira para Enfermeiras',
@@ -56,9 +56,28 @@ export default function Page({ searchParams }: FormProps) {
         'Competências Técnicas'
     ]
 
+    const subtitles = [
+        [
+            'Para que os seus pacientes tenham o melhor desfecho possível, quanto mais segurança você tiver, melhor vai ser.',
+            'Porque na hora do caos, na maioria das vezes a gente congela.Às vezes, a pressão vai no teto e a insegurança bate ainda mais forte.',
+            'Na Formação Prática do DONA, você vai ter uma trilha de conteúdos com treinamentos práticos e simples para saber cada passo a passo comprovado que deixa todas as outras enfermeiras pensando: “eu nunca vi uma enfermeira lidando com uma intercorrência tão bem assim!”.',
+        ],
+        [
+            'Quando o assunto é liderança, normalmente as enfermeiras ou acabam sendo “boazinhas demais” e deixam todo mundo no hospital fazer o quer…',
+            'Ou acabam sendo autoritárias demais, tentando ganhar a equipe através da imposição de cima para baixo.',
+            'Isso acaba acontecendo porque a faculdade não te ensina nada sobre as habilidades socioemocionais. Mas, aqui na Formação DONA, você aprende sobre as estratégias de comunicação, liderança e engajamento de equipe, comprovadas cientificamente, para que você não dependa de um “carisma natural” para liderar. ',
+        ],
+        [
+            'Não sabe exatamente o que fazer para se destacar no mercado de trabalho?',
+            'Enquanto o mercado está em constante mudança, as grades curriculares das graduações são sempre as mesmas.',
+            'Para alcançar esse destaque, tudo o que você precisa é estar alinhada com o futuro do cuidado. Através do desenvolvimento das habilidades emergentes segundo o Fórum Econômico Mundial. E aqui na Formação você encontra uma trilha especializada para você subir de cargo na enfermagem ou conquistar o seu primeiro emprego.',
+        ]
+    ]
+
     return (
         <>
             <Header
+                btn={true}
                 price="10,00"
                 title={<>Formação Dona com conhecimento prático de +20 anos de experiência para você ter segurança como enfermeira</>}
                 searchParams={searchParams}
@@ -66,7 +85,7 @@ export default function Page({ searchParams }: FormProps) {
                 items={listHeaderItems}
             />
             <main className="">
-                <Section classNameS="px-4 grad-01" className="py-12 sm:py-24">
+                <Section classNameS="px-4 bg-new" className="py-12 sm:py-24">
                     <div className="flex flex-col gap-12 text-center">
                         <div className="max-w-4xl flex flex-col items-center gap-8 text-white">
                             <div className="flex flex-col gap-4">
@@ -122,40 +141,41 @@ export default function Page({ searchParams }: FormProps) {
                     </div>
                 </Section>
                 <Section classNameS="px-4 py-12 sm:py-24 bg-[#220023]">
-                    <div className="w-full flex flex-col items-center max-w-4xl">
-                        <div className="text-white flex flex-col items-center gap-12">
-                            <h3 className="text-2xl sm:text-4xl font-bold text-white text-center">Por que isso está acontecendo?</h3>
-                            <div className="max-w-xl flex flex-col items-start gap-6 py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34]">
-                                <h4 className="text-lg font-medium text-white">Porque a faculdade te dá um diploma - mas <strong>não te ensina a ser bem paga</strong>. Não te ensina a:</h4>
-                                <ul className="flex flex-col gap-2">
-                                    <li className="relative ps-8 flex items-center">
-                                        <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <span>Se posicionar</span>
-                                    </li>
-                                    <li className="relative ps-8 flex items-center">
-                                        <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <span>Liderar equipes</span>
-                                    </li>
-                                    <li className="relative ps-8 flex items-center">
-                                        <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <span>Assumir a frente diante do caos</span>
-                                    </li>
-                                    <li className="relative ps-8 flex items-center">
-                                        <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <span>Se tornar insubstituível</span>
-                                    </li>
-                                </ul>
-                                <div className="flex flex-col gap-6">
-                                    <h5 className="text-lg font-medium text-white">E o mercado nota.</h5>
-                                    <div className="flex flex-col gap-4">
-                                        <p>A prova disso é a mensagem que recebemos frequentemente de gestoras e recrutadoras de enfermagem. Como essa:</p>
-                                        <p className="ps-4 text-zinc-300">{`"`}Os enfermeiros não assumem liderança. Essa é a minha maior dificuldade! Não têm postura, não evoluem, não sabem comunicar, não planejam, não propõem melhorias.</p>
-                                        <p className="ps-4 text-zinc-300">E aí a gente, como gestora, não sabe mais o que fazer.{`"`}</p>
-                                        <p>Essa é a verdade que ninguém fala: <strong>enfermeira que não entrega valor visível é facilmente substituída e vive insatisfeita com o salário</strong>.</p>
+                    <div className="flex flex-col gap-12 items-center">
+                        <div className="w-full flex flex-col items-center max-w-4xl">
+                            <div className="text-white flex flex-col items-center gap-12">
+                                <h3 className="text-2xl sm:text-4xl font-bold text-white text-center">Por que isso está acontecendo?</h3>
+                                <div className="max-w-xl flex flex-col items-start gap-6 py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34]">
+                                    <h4 className="text-lg font-medium text-white">Porque a faculdade te dá um diploma - mas <strong>não te ensina a ser bem paga</strong>. Não te ensina a:</h4>
+                                    <ul className="flex flex-col gap-2">
+                                        <li className="relative ps-8 flex items-center">
+                                            <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <span>Se posicionar</span>
+                                        </li>
+                                        <li className="relative ps-8 flex items-center">
+                                            <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <span>Liderar equipes</span>
+                                        </li>
+                                        <li className="relative ps-8 flex items-center">
+                                            <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <span>Assumir a frente diante do caos</span>
+                                        </li>
+                                        <li className="relative ps-8 flex items-center">
+                                            <svg className="absolute left-0 h-6 w-6 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m424-408-86-86q-11-11-28-11t-28 11q-11 11-11 28t11 28l114 114q12 12 28 12t28-12l226-226q11-11 11-28t-11-28q-11-11-28-11t-28 11L424-408Zm56 328q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <span>Se tornar insubstituível</span>
+                                        </li>
+                                    </ul>
+                                    <div className="flex flex-col gap-6">
+                                        <h5 className="text-lg font-medium text-white">E o mercado nota.</h5>
+                                        <div className="flex flex-col gap-4">
+                                            <p>A prova disso é a mensagem que recebemos frequentemente de gestoras e recrutadoras de enfermagem. Como essa:</p>
+                                            <p className="ps-4 text-zinc-300">{`"`}Os enfermeiros não assumem liderança. Essa é a minha maior dificuldade! Não têm postura, não evoluem, não sabem comunicar, não planejam, não propõem melhorias.</p>
+                                            <p className="ps-4 text-zinc-300">E aí a gente, como gestora, não sabe mais o que fazer.{`"`}</p>
+                                            <p>Essa é a verdade que ninguém fala: <strong>enfermeira que não entrega valor visível é facilmente substituída e vive insatisfeita com o salário</strong>.</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            {/* <div className="w-full flex flex-col gap-6 sm:gap-12">
+                                {/* <div className="w-full flex flex-col gap-6 sm:gap-12">
                                 {carrosselImages.map((carrosel: string[], index: number) => (
                                     <div key={index} className="w-full flex justify-center items-center sm:flex-row flex-col gap-4">
                                         <div className="sm:w-56 sm:text-left text-center">
@@ -168,55 +188,54 @@ export default function Page({ searchParams }: FormProps) {
                                     </div>
                                 ))}
                             </div> */}
-                            <Button
-                                searchParams={searchParams}
-                                href="#inscricao"
-                                label="QUERO FAZER MINHA INSCRIÇÃO"
-                                className="max-w-full flex justify-center"
-                            />
-                        </div>
-                    </div>
-                </Section>
-                <Section classNameS="px-4 py-12 sm:py-24 grad-01">
-                    <div className="sm:grid sm:grid-cols-2 flex flex-col items-center gap-4 sm:gap-0">
-                        <div className="relative w-full h-[490px] sm:h-[600px]">
-                            <Image
-                                src="/images/mockup.webp"
-                                alt=""
-                                layout="fill"
-                                objectFit="contain"
-                            />
-                        </div>
-                        <div className="text-white flex flex-col items-center gap-12">
-                            <div className="flex flex-col items-start gap-4">
-                                <h2 className="text-2xl sm:text-4xl text-left font-bold">Como resolver isso?:</h2>
-                                <p><strong>Você precisa parar de ser uma enfermeira apenas técnica e precisa começar a ser estratégica</strong>.</p>
-                                <p>Isso significa desenvolver habilidades que <strong>fazem você ser promovida, não esquecida</strong>:</p>
-                                <ul className='relative flex flex-col gap-6 text-lg'>
-                                    <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
-                                        <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <p className="">Postura de liderança;</p>
-                                    </li>
-                                    <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
-                                        <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <p className="">Clareza emocional e comunicação com a equipe;</p>
-                                    </li>
-                                    <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
-                                        <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <p className="">Raciocínio clínico na prática;</p>
-                                    </li>
-                                    <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
-                                        <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
-                                        <p className="">Capacidade de organizar processos e pensar como gestora</p>
-                                    </li>
-                                </ul>
-                                <p className="text-center">Quando você desenvolve isso, você para de disputar por salário e começa a escolher onde quer atuar.</p>
-                                <Button
+                                {/* <Button
                                     searchParams={searchParams}
                                     href="#inscricao"
                                     label="QUERO FAZER MINHA INSCRIÇÃO"
                                     className="max-w-full flex justify-center"
+                                /> */}
+                            </div>
+                        </div>
+                        <div className="sm:grid sm:grid-cols-2 flex flex-col items-center gap-4 sm:gap-0">
+                            <div className="relative w-full h-[490px] sm:h-[600px]">
+                                <Image
+                                    src="/images/v4/mock.png"
+                                    alt=""
+                                    layout="fill"
+                                    objectFit="contain"
                                 />
+                            </div>
+                            <div className="text-white flex flex-col items-center gap-12">
+                                <div className="flex flex-col items-start gap-4">
+                                    <h2 className="text-2xl sm:text-4xl text-left font-bold">Como resolver isso?:</h2>
+                                    <p><strong>Você precisa parar de ser uma enfermeira apenas técnica e precisa começar a ser estratégica</strong>.</p>
+                                    <p>Isso significa desenvolver habilidades que <strong>fazem você ser promovida, não esquecida</strong>:</p>
+                                    <ul className='relative flex flex-col gap-6 text-lg'>
+                                        <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
+                                            <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <p className="">Postura de liderança;</p>
+                                        </li>
+                                        <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
+                                            <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <p className="">Clareza emocional e comunicação com a equipe;</p>
+                                        </li>
+                                        <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
+                                            <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <p className="">Raciocínio clínico na prática;</p>
+                                        </li>
+                                        <li className="w-full relative flex items-center ps-8 border-b border-white/20 pb-4">
+                                            <svg className="absolute left-0 top-1 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" /></svg>
+                                            <p className="">Capacidade de organizar processos e pensar como gestora</p>
+                                        </li>
+                                    </ul>
+                                    <p className="text-center">Quando você desenvolve isso, você para de disputar por salário e começa a escolher onde quer atuar.</p>
+                                    {/* <Button
+                                        searchParams={searchParams}
+                                        href="#inscricao"
+                                        label="QUERO FAZER MINHA INSCRIÇÃO"
+                                        className="max-w-full flex justify-center"
+                                    /> */}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -259,23 +278,23 @@ export default function Page({ searchParams }: FormProps) {
                                     <li className="sm:absolute left-0 flex translate-x-[8%] sm:translate-x-0 w-[90%] sm:w-[390px] top-[25px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] sm:left-auto z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">D</h5>
-                                        <p className="text-zinc-300">Domine técnicas e conteúdos: Aprenda o que ninguém ensina sobre raciocínio clínico, fluxogramas e atuação segura.</p>
+                                        <p className="text-zinc-300"><strong>Domine técnicas e conteúdos:</strong> Aprenda o que ninguém ensina sobre raciocínio clínico, fluxogramas e atuação segura.</p>
                                     </li>
                                     <li className="sm:absolute flex translate-x-[8%] sm:translate-x-0 sm:right-0 top-[185px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-left-[39px] z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">O</h5>
-                                        <p className="text-zinc-300">Organize e lidere a sua equipe: Liderança prática, delegação de funções e engajamento de equipe.</p>
+                                        <p className="text-zinc-300"><strong>Organize e lidere a sua equipe:</strong> Liderança prática, delegação de funções e engajamento de equipe.</p>
                                     </li>
                                     <li className="absolute h-full w-4 bg-[#441348] border-x-[4px] border-[#310c34]"></li>
                                     <li className="sm:absolute left-0 flex translate-x-[8%] sm:translate-x-0 top-[345px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] sm:left-auto z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">N</h5>
-                                        <p className="text-zinc-300">Organize e lidere a sua equipe: Liderança prática, delegação de funções e engajamento de equipe.</p>
+                                        <p className="text-zinc-300"><strong>Organize e lidere a sua equipe:</strong> Liderança prática, delegação de funções e engajamento de equipe.</p>
                                     </li>
                                     <li className="sm:absolute flex translate-x-[8%] sm:translate-x-0 sm:right-0 bottom-[25px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-left-[39px] z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">A</h5>
-                                        <p className="text-zinc-300">Organize e lidere a sua equipe: Liderança prática, delegação de funções e engajamento de equipe.</p>
+                                        <p className="text-zinc-300"><strong>Organize e lidere a sua equipe:</strong> Liderança prática, delegação de funções e engajamento de equipe.</p>
                                     </li>
                                     <li className="absolute -bottom-[46px] sm:left-auto -left-10 z-50"><svg className="h-24 w-24 fill-[#441348]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z" /></svg></li>
                                 </ul>
@@ -297,16 +316,16 @@ export default function Page({ searchParams }: FormProps) {
                                     </div>
                                 ))}
                             </div> */}
-                            <Button
+                            {/* <Button
                                 searchParams={searchParams}
                                 href="#inscricao"
                                 label="QUERO FAZER MINHA INSCRIÇÃO"
                                 className="max-w-full flex justify-center"
-                            />
+                            /> */}
                         </div>
                     </div>
                 </Section>
-                <Section classNameS="px-4 py-12 sm:py-24 grad-01">
+                <Section classNameS="px-4 py-12 sm:py-24 bg-new">
                     <div className="w-full flex flex-col items-center max-w-4xl">
                         <div className="text-white flex flex-col items-center gap-12">
                             <h3 className="text-2xl sm:text-4xl font-bold text-white text-center">Para quem é a nossa Formação?</h3>
@@ -319,6 +338,33 @@ export default function Page({ searchParams }: FormProps) {
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </Section>
+                <Section classNameS="px-4 grad-01" className="py-12 sm:py-24">
+                    <div className="flex flex-col gap-12 text-center">
+                        <div className="max-w-4xl flex flex-col items-center gap-8 text-white">
+                            <h2 className="text-2xl sm:text-4xl font-bold">Centenas de alunas enfermeiras nos mostraram que você só precisa de 3 pilares para se tornar DONA do plantão</h2>
+                            <div className="sm:grid sm:grid-cols-2 gap-6 flex flex-col">
+                                <Card
+                                    title="Valorização de Carreira"
+                                    icon={<svg className="fill-white w-16 h-16" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m387-412 35-114-92-74h114l36-112 36 112h114l-93 74 35 114-92-71-93 71ZM240-40v-309q-38-42-59-96t-21-115q0-134 93-227t227-93q134 0 227 93t93 227q0 61-21 115t-59 96v309l-240-80-240 80Zm240-280q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70ZM320-159l160-41 160 41v-124q-35 20-75.5 31.5T480-240q-44 0-84.5-11.5T320-283v124Zm160-62Z" /></svg>}
+                                    subtitle={subtitles[2]}
+                                    customClass="col-span-1"
+                                />
+                                <Card
+                                    title="Referência na Liderança"
+                                    icon={<svg className="fill-white w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" /></svg>}
+                                    subtitle={subtitles[1]}
+                                    customClass="col-span-1"
+                                />
+                                <Card
+                                    title="Atuação 100% Segura"
+                                    icon={<svg className="fill-white w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M200-200v-560 454-85 191Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v320h-80v-320H200v560h280v80H200Zm494 40L552-222l57-56 85 85 170-170 56 57L694-80ZM320-440q17 0 28.5-11.5T360-480q0-17-11.5-28.5T320-520q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440Zm0-160q17 0 28.5-11.5T360-640q0-17-11.5-28.5T320-680q-17 0-28.5 11.5T280-640q0 17 11.5 28.5T320-600Zm120 160h240v-80H440v80Zm0-160h240v-80H440v80Z" /></svg>}
+                                    subtitle={subtitles[0]}
+                                    customClass="col-span-2"
+                                />
                             </div>
                         </div>
                     </div>
@@ -340,12 +386,12 @@ export default function Page({ searchParams }: FormProps) {
                                     </div>
                                 ))}
                             </div>
-                            <Button
+                            {/* <Button
                                 searchParams={searchParams}
                                 href="#inscricao"
                                 label="QUERO FAZER MINHA INSCRIÇÃO"
                                 className="max-w-full flex justify-center"
-                            />
+                            /> */}
                         </div>
                         <div className="max-w-2xl flex flex-col gap-6 text-center text-white">
                             <h3 className="text-2xl sm:text-3xl font-bold text-white">Você quer poder ganhar mais como enfermeira, e nós temos o caminho certo para isso</h3>
@@ -364,12 +410,12 @@ export default function Page({ searchParams }: FormProps) {
                         />
                     </div>
                 </Section>
-                <Section classNameS="px-4 py-12 sm:py-24 grad-01">
+                <Section classNameS="px-4 py-12 sm:py-24 bg-gradient-to-b from-[#1e1e1e] to-[#7a088e]">
                     <div className="flex flex-col gap-12">
                         <div className="sm:grid sm:grid-cols-2 flex flex-col items-center gap-4 sm:gap-0">
                             <div className="relative w-full h-[390px] sm:h-[600px]">
                                 <Image
-                                    src="/images/mockup2.webp"
+                                    src="/images/v4/mock2.png"
                                     alt=""
                                     layout="fill"
                                     objectFit="contain"
@@ -404,12 +450,6 @@ export default function Page({ searchParams }: FormProps) {
                                             <p className="border-b border-white/20 pb-4">Ser valorizada com um cargo melhor do que você já tem atualmente na enfermagem</p>
                                         </li>
                                     </ul>
-                                    <Button
-                                        searchParams={searchParams}
-                                        href="#inscricao"
-                                        label="QUERO FAZER MINHA INSCRIÇÃO"
-                                        className="max-w-full flex justify-center"
-                                    />
                                 </div>
                             </div>
                         </div>
@@ -426,6 +466,12 @@ export default function Page({ searchParams }: FormProps) {
                                     <iframe className="rounded-md w-full w-full h-[200px] lg:w-[400px] lg:h-[240px]" id="panda-515f8b27-d211-44c7-9c7b-7b8e6ba13861" src="https://player-vz-d6af11ef-db4.tv.pandavideo.com.br/embed/?v=515f8b27-d211-44c7-9c7b-7b8e6ba13861&iosFakeFullscreen=true" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowFullScreen></iframe>
                                 </div>
                             </div>
+                            <Button
+                                searchParams={searchParams}
+                                href="#inscricao"
+                                label="QUERO FAZER MINHA INSCRIÇÃO"
+                                className="max-w-full flex justify-center"
+                            />
                         </div>
                     </div>
                 </Section>
@@ -459,9 +505,9 @@ export default function Page({ searchParams }: FormProps) {
                                     <div>
                                         <h5 className="flex items-end">
                                             <span className="text-lg">12x</span>
-                                            <span className="text-5xl font-bold">R$59,70</span>
+                                            <span className="text-5xl font-bold">R$99,70</span>
                                         </h5>
-                                        <p className="text-lg text-white/80">Ou R$ 597,00 à vista</p>
+                                        <p className="text-lg text-white/80">Ou R$ 997,00 à vista</p>
                                     </div>
                                     <hr className="w-full border border-white/20" />
                                     <h5 className="uppercase"><strong>7 dias</strong> de garantia incondicional</h5>
@@ -484,11 +530,11 @@ export default function Page({ searchParams }: FormProps) {
                         </div>
                     </div>
                 </Section>
-                <Section classNameS="px-4 pb-0 pt-12 sm:py-24 bg-[#000] grad-01">
+                <Section classNameS="px-4 pb-0 pt-12 sm:py-24 bg-gradient-to-b from-[#1e1e1e] to-[#7a088e]">
                     <div className="flex flex-col gap-6 sm:gap-12">
                         <div className="flex flex-col items-center gap-6 grad-02 w-full max-w-xl py-12 px-4 sm:p-12 rounded-xl">
                             <Image
-                                src="/images/garantia.webp"
+                                src="/images/v4/garantee.png"
                                 alt="Garantia selo"
                                 width={150}
                                 height={150}

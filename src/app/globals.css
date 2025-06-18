@@ -18,6 +18,12 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg-new {
+  background-image: url("/images/v4/bg.png");
+  background-position: right middle;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .btn-grad {
   background-image: linear-gradient(180deg, #72d9ff 0%, #135192 100%);
