@@ -20,7 +20,7 @@ export default function Button({ href, label, className, classNameB, searchParam
             <div className={`w-full flex ${className ? className : 'max-w-sm'}`}>
                 <a
                     className={`px-16 sm:px-20 btn-grad-2 px-4 py-3 text-xl font-bold uppercase rounded-full ${classNameB}`}
-                    href={href}
+                    href={`${href}?utm_term=${searchParams.utm_term}&utm_campaign=${searchParams.utm_campaign}&utm_source=${searchParams.utm_source}&utm_content=${searchParams.utm_content}&utm_medium=${searchParams.utm_medium}`}
 
                 >{label}</a>
             </div>
