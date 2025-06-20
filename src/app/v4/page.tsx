@@ -123,7 +123,7 @@ export default function Page({ searchParams }: FormProps) {
                 <Section classNameS="px-4 bg-white border-y-4 border-[#c4ecf4] bg-[#efeee8]" className="py-12 sm:py-24">
                     <div className="max-w-5xl flex flex-col items-center gap-8 text-black">
                         <h2 className="text-2xl sm:text-4xl font-bold text-black text-center">O mundo mudou. O ensino da enfermagem, não.</h2>
-                        <div className="relative w-full h-[472px]">
+                        <div className="relative w-full h-[240px] sm:h-[472px]">
                             <Image
                                 src="/images/v4/g4.png"
                                 alt=""
@@ -207,7 +207,7 @@ export default function Page({ searchParams }: FormProps) {
                             </div>
                             <div className="text-white flex flex-col items-center gap-12">
                                 <div className="flex flex-col items-start gap-4">
-                                    <h2 className="text-2xl sm:text-4xl text-left font-bold">Como resolver isso?:</h2>
+                                    <h2 className="text-2xl sm:text-4xl text-left font-bold">Como resolver isso?</h2>
                                     <p><strong>Você precisa parar de ser uma enfermeira apenas técnica e precisa começar a ser estratégica</strong>.</p>
                                     <p>Isso significa desenvolver habilidades que <strong>fazem você ser promovida, não esquecida</strong>:</p>
                                     <ul className='relative flex flex-col gap-6 text-lg'>
@@ -369,10 +369,10 @@ export default function Page({ searchParams }: FormProps) {
                         </div>
                     </div>
                 </Section>
-                <Section classNameS="px-4 py-12 sm:py-24 bg-[#220023]">
+                <Section classNameS="px-4 py-12 sm:py-24 bg-[#220023] overflow-hidden">
                     <div className="w-full flex flex-col items-center gap-12">
-                        <div className="text-white flex flex-col items-center gap-12">
-                            <h3 className="text-2xl sm:text-4xl font-bold text-white text-center max-w-4xl">Quais trilhas de conteúdos práticos você vai encontrar na Formação DONA?</h3>
+                        <div className="w-full text-white flex flex-col items-center gap-12">
+                            <h3 className="text-2xl sm:text-4xl font-bold text-white text-center sm:max-w-4xl">Quais trilhas de conteúdos práticos você vai encontrar na Formação DONA?</h3>
                             <div className="w-full flex flex-col gap-6 sm:gap-12">
                                 {carrosselImages.map((carrosel: string[], index: number) => (
                                     <div key={index} className="w-full flex justify-center items-center sm:flex-row flex-col gap-4">
@@ -513,7 +513,7 @@ export default function Page({ searchParams }: FormProps) {
                                     <h5 className="uppercase"><strong>7 dias</strong> de garantia incondicional</h5>
                                     <Button
                                         searchParams={searchParams}
-                                        href="https://wa.me/5584996206183?text=C%C3%A9sar%2C%20estou%20vindo%20da%20p%C3%A1gina%20e%20quero%20me%20matricular%20na%20Forma%C3%A7%C3%A3o%20DONA!"
+                                        href="https://chk.eduzz.com/2337329"
                                         label="Quero me matricular!"
                                         classNameB="w-full max-w-xl text-center"
                                     />
