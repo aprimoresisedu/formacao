@@ -278,23 +278,23 @@ export default function Page({ searchParams }: FormProps) {
                                     <li className="sm:absolute left-0 flex translate-x-[8%] sm:translate-x-0 w-[90%] sm:w-[390px] top-[25px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] sm:left-auto z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">D</h5>
-                                        <p className="text-zinc-300"><strong>Domine técnicas e conteúdos:</strong> Aprenda o que ninguém ensina sobre raciocínio clínico, fluxogramas e atuação segura.</p>
+                                        <p className="text-zinc-300"><strong>Domine técnicas e conteúdos:</strong> <br/>Aprenda o que ninguém ensina sobre raciocínio clínico, fluxogramas e atuação segura.</p>
                                     </li>
                                     <li className="sm:absolute flex translate-x-[8%] sm:translate-x-0 sm:right-0 top-[185px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4 z-50">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-left-[39px] z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">O</h5>
-                                        <p className="text-zinc-300"><strong>Organize e lidere a sua equipe:</strong> Liderança prática, delegação de funções e engajamento de equipe.</p>
+                                        <p className="text-zinc-300"><strong>Organize e lidere a sua equipe:</strong><br/>Liderança prática, delegação de funções e engajamento de equipe.</p>
                                     </li>
                                     <li className="absolute h-full w-4 bg-[#441348] border-x-[4px] border-[#310c34]"></li>
                                     <li className="sm:absolute left-0 flex translate-x-[8%] sm:translate-x-0 top-[345px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-right-[39px] sm:left-auto z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">N</h5>
-                                        <p className="text-zinc-300"><strong>Nivele-se por cima:</strong> Postura firme, comunicação clara, autoridade real.</p>
+                                        <p className="text-zinc-300"><strong>Nivele-se por cima:</strong> <br/>Postura firme, comunicação clara, autoridade real.</p>
                                     </li>
                                     <li className="sm:absolute flex translate-x-[8%] sm:translate-x-0 sm:right-0 bottom-[25px] w-[90%] sm:w-[390px] h-[160px] py-8 px-8 border border-[#4a124e] rounded-xl bg-[#310c34] flex items-center gap-4">
                                         <span className="h-6 w-6 bg-[#441348] border-4 border-[#310c34] rounded-full absolute -left-[34px] sm:-left-[39px] z-[999]" />
                                         <h5 className="text-6xl font-extrabold text-white">A</h5>
-                                        <p className="text-zinc-300"><strong>Atue com autonomia e segurança:</strong> Tome decisões com confiança — e pare de perguntar o tempo todo.</p>
+                                        <p className="text-zinc-300"><strong>Atue com autonomia e segurança:</strong> <br/>Tome decisões com confiança — e pare de perguntar o tempo todo.</p>
                                     </li>
                                     <li className="absolute -bottom-[46px] sm:left-auto -left-10 z-50"><svg className="h-24 w-24 fill-[#441348]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z" /></svg></li>
                                 </ul>
