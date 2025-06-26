@@ -77,13 +77,24 @@ export default function Page({ searchParams }: FormProps) {
     return (
         <>
             <Header
-                btn={true}
                 price="10,00"
                 title={<>Formação Dona com conhecimento prático de +20 anos de experiência para você ter segurança como enfermeira</>}
                 searchParams={searchParams}
                 subtitle={<>Na faculdade, nos ensinam muita teoria, mas e na prática? Esta Formação já mostrou para centenas de alunas o passo a passo para:</>}
                 items={listHeaderItems}
             />
+            <a
+                href="https://wa.me/5584996995568?text=Estou%20com%20uma%20d%C3%BAvida%20sobre%20a%20Forma%C3%A7%C3%A3o%20DONA%20do%20Plant%C3%A3o%2C%20consegue%20priorizar%20meu%20atendimento%3F"
+                className="fixed right-4 bottom-4 bg-white p-[2px] rounded-full z-[9999]"
+            >
+                <Image
+                    src="/images/v4/image.png"
+                    alt=""
+                    width={56}
+                    height={56}
+                />
+
+            </a>
             <main className="">
                 <Section classNameS="px-4 bg-new" className="py-12 sm:py-24">
                     <div className="flex flex-col gap-12 text-center">
