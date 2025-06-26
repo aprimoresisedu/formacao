@@ -46,7 +46,7 @@ export default function Header({ searchParams, price, title, subtitle, items, bt
                         </div> */}
                         {!btn && (
                             <Button
-                                searchParams={searchParams}
+                                searchParams={{}}
                                 href="#inscricao"
                                 label="Quero ver valores"
                                 classNameB="w-full max-w-xl text-center"
