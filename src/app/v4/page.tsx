@@ -610,7 +610,7 @@ export default function Page({ searchParams }: FormProps) {
                                 <p>Sim. Independente se você trabalha na UTI, Enfermaria, PS, Sala vermelha, UBS, Classificação de risco, Homecare… a Formação foi pensada para entregar segurança na sua atuação e valorização para a sua carreira.</p>
                             </Dropdown>
                             <Dropdown title="Plano de assinatura">
-                                <p>Faça parte da maior formação para enfermeiras e assine nosso plano por apenas 12x de R$ 59,70.</p>
+                                <p>Faça parte da maior formação para enfermeiras e assine nosso plano por apenas 12x de R$ 99,70.</p>
                                 <p>Você terá acesso a todas as aulas gravadas, Elegibilidade da Certificação pelo MEC ao final do curso, materiais de apoio e as trilhas de aprendizagem individual.</p>
                                 <p>Lembrando que a cobrança ocorre anualmente, mas você pode parcelar esse valor em até doze vezes sem juros no cartão.</p>
                             </Dropdown>
