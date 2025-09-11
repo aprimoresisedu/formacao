@@ -1,11 +1,15 @@
+"use client"
+
 import Button from "@/components/button";
 import Card from "@/components/card";
 import Dropdown from "@/components/dropdown";
 import Header from "@/components/header";
 import Section from "@/components/section";
-import { Slider } from "@/components/slider";
 import { Slider2 } from "@/components/slider-2";
+import { XMarkIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 interface FormProps {
     searchParams: {
@@ -17,7 +21,66 @@ interface FormProps {
     }
 }
 
+type Data = {
+    name: string
+    email: string
+    phone: string
+}
+
+const initialData = {
+    name: '',
+    email: '',
+    phone: '',
+}
+
 export default function Page({ searchParams }: FormProps) {
+
+    const [error, setError] = useState<boolean>(false)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [data, setData] = useState<Data>(initialData)
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const { push } = useRouter()
+
+    function formatPhone(phone: string): string {
+        phone = phone.replace(/\D/g, '');
+
+        phone = phone.replace(/^(\d{2})(\d)/, '($1) $2');
+        phone = phone.replace(/(\d{5})(\d)/, '$1-$2');
+
+        return phone;
+    }
+
+    function onChange({ type, value }: { type: keyof Data, value: string }) {
+
+        if (type === 'phone') {
+
+            setData((prevState) => ({
+                ...prevState,
+                phone: formatPhone(value)
+            }))
+
+            return
+        }
+
+        if (type) {
+            setData((prevState) => ({
+                ...prevState,
+                [type]: value
+            }))
+        }
+    }
+
+    function formatPhoneToE164(phone: string): string {
+        // Remove todos os caracteres não numéricos
+        const digits = phone.replace(/\D/g, "");
+
+        // Verifica se tem o DDD (2 primeiros dígitos após o "55")
+        if (digits.length === 11) {
+            return `+55${digits}`;
+        }
+
+        return 'Telefone inválido'
+    }
 
     const listHeaderItems = [
         '➡ Conquistar uma carreira valorizada subindo de cargo ou conquistando o primeiro emprego',
@@ -73,6 +136,35 @@ export default function Page({ searchParams }: FormProps) {
             'Para alcançar esse destaque, tudo o que você precisa é estar alinhada com o futuro do cuidado. Através do desenvolvimento das habilidades emergentes segundo o Fórum Econômico Mundial. E aqui na Formação você encontra uma trilha especializada para você subir de cargo na enfermagem ou conquistar o seu primeiro emprego.',
         ]
     ]
+
+    function formSubmited() {
+
+        setIsLoading(true)
+        setError(false)
+
+        if (data.email.length === 0 || data.name.length === 0 || data.phone.length === 0) {
+
+            setError(true)
+            setIsLoading(false)
+            return
+        }
+
+        fetch(`https://services.leadconnectorhq.com/hooks/V4asAT7IrV5IdErLl2Fr/webhook-trigger/d8930375-d577-4610-85de-d394a6bed320`, {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                ...data,
+                phone: formatPhoneToE164(data.phone)
+            })
+        }).then(() => {
+
+            setIsLoading(false)
+            push(`https://chk.eduzz.com/2337329?email=${data.email}&name=${data.name}&phone=${data.phone}&utm_term=${searchParams.utm_term}&utm_campaign=${searchParams.utm_campaign}&utm_source=utm_source=${searchParams.utm_source}&utm_content=${searchParams.utm_content}&utm_medium=${searchParams.utm_medium}`)
+        }).catch(e => console.log(e))
+    }
 
     return (
         <>
@@ -528,6 +620,10 @@ export default function Page({ searchParams }: FormProps) {
                                     <Button
                                         searchParams={searchParams}
                                         href="https://chk.eduzz.com/2337329"
+                                        action={() => {
+
+                                            setIsOpen(true)
+                                        }}
                                         label="Quero me matricular!"
                                         classNameB="w-full max-w-xl text-center"
                                     />
@@ -571,28 +667,6 @@ export default function Page({ searchParams }: FormProps) {
                         </div>
                     </div>
                 </Section>
-                {/* <Section classNameS="px-4 pb-12 pt-0 sm:py-24 grad-01">
-                    <div className="sm:grid sm:grid-cols-2 flex flex-col items-center gap-4 sm:gap-0">
-                        <div className="relative w-full h-[400px] sm:h-[600px]">
-                            <Image
-                                src="/images/mockup2.webp"
-                                alt=""
-                                layout="fill"
-                                objectFit="contain"
-                            />
-                        </div>
-                        <div className="text-white flex flex-col items-center gap-4 sm:gap-12">
-                            <div className="flex flex-col items-start gap-4">
-                                <h2 className="text-2xl sm:text-4xl text-left font-bold">O que é o DONA?</h2>
-                                <div className="flex flex-col gap-4">
-                                    <p className="">Somos uma Instituição Educacional que transformou o mercado da enfermagem e já impactou mais de 800 alunas.</p>
-                                    <p className="">Oferecemos um ecossistema digital completo, através da nossa Formação e nossa Pós, com o objetivo de tornar nossas alunas enfermeiras seguras que tomam as melhores decisões nos plantões e são admiradas pelos colegas de trabalho.</p>
-                                    <p className="">Toda a nossa metodologia é baseada na Aprendizagem Significativa, com aulas voltadas para aplicação prática do conhecimento e validada por mais de 50 mil horas de plantões.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Section> */}
                 <Section classNameS="px-4 py-12 sm:py-24 bg-[#efeee8]">
                     <div className="w-full flex flex-col items-center gap-4">
                         <h2 className="text-2xl sm:text-4xl font-bold text-black text-center">Perguntas Frequentes</h2>
@@ -659,6 +733,64 @@ export default function Page({ searchParams }: FormProps) {
             <footer className="py-4 bg-black text-white text-center">
                 <p>Dona do Plantão. Todos os direitos reservados. Políticas de Privacidade.</p>
             </footer>
+            {isOpen && (
+                <div className={`w-full h-screen fixed top-0 left-0 flex items-center justify-center`}>
+                    <div onClick={() => setIsOpen(false)} className={`absolute top-0 left-0 w-full h-full bg-black/40`} />
+                    <div className="relative max-w-xl w-full px-6 py-10 pb-6 rounded-xl bg-white z-50 flex flex-col items-center gap-4">
+                        <div className="text-center">
+                            <h2 className="text-2xl font-semibold">Formação Dona do Plantão</h2>
+                            <p className="text-slate-700 text-sm">Digite seu nome, E-mail e Telefone</p>
+                            {error && <p className="text-rose-700 text-sm">Preencha os campos abaxio corretamente.</p>}
+                        </div>
+                        <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 border border-zinc-200 w-5 h-5 flex items-center justify-center rounded hover:bg-zinc-100">
+                            <XMarkIcon className="w-3 h-3 stroke-2 text-zinc-600" />
+                        </button>
+                        <div className="w-full flex flex-col gap-4">
+                            <div className="flex flex-col gap-1">
+                                <label className="text-sm text-slate-700">Nome:</label>
+                                <input
+                                    value={data.name}
+                                    onChange={(e) => onChange({ type: 'name', value: e.target.value })}
+                                    className="px-3 py-2 border border-zinc-200 outline-none shadow rounded-lg text-slate-700 text-sm"
+                                    placeholder="Digite seu nome..."
+                                />
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <label className="text-sm text-slate-700">E-mail:</label>
+                                <input
+                                    value={data.email}
+                                    onChange={(e) => onChange({ type: 'email', value: e.target.value })}
+                                    className="px-3 py-2 border border-zinc-200 outline-none shadow rounded-lg text-slate-700 text-sm"
+                                    placeholder="Digite seu email..."
+                                />
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <label className="text-sm text-slate-700">Telefone:</label>
+                                <input
+                                    value={data.phone}
+                                    onChange={(e) => onChange({ type: 'phone', value: e.target.value })}
+                                    className="px-3 py-2 border border-zinc-200 outline-none shadow rounded-lg text-slate-700 text-sm"
+                                    placeholder="Telefone com DDD"
+                                    maxLength={15}
+                                />
+                            </div>
+                            <div className="flex flex-col items-center gap-2">
+                                <button onClick={() => formSubmited()} className="w-full bg-emerald-500 text-white font-semibold px-4 py-2 text-sm rounded-lg flex items-center justify-center gap-2 shadow">
+                                    {isLoading ? (
+                                        <div className="w-4 h-4 border-2 border-t-zinc-500 border-gray-300 rounded-full animate-spin" />
+                                    ) : (
+                                        <span>Continuar Matrícula</span>
+                                    )}
+                                </button>
+                                <p className="text-sm text-slate-700/50 flex items-center gap-1">
+                                    <LockClosedIcon className="w-3 h-3" strokeWidth={3} />
+                                    <span>Seus dados estão seguros</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

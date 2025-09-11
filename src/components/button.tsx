@@ -11,9 +11,23 @@ interface ButtonProps {
         utm_source?: string
         utm_medium?: string
     }
+    action?: any
 }
 
-export default function Button({ href, label, className, classNameB, searchParams }: ButtonProps) {
+export default function Button({ href, label, className, classNameB, searchParams, action }: ButtonProps) {
+
+    if (action) {
+        return (
+            <div className={`w-full flex ${className ? className : 'max-w-sm'}`}>
+                <button
+                    className={`btn-grad-2 px-4 py-3 text-xl font-bold uppercase rounded-full ${classNameB}`}
+                    onClick={action}
+                >
+                    {label}
+                </button>
+            </div>
+        )
+    }
 
     if (searchParams.utm_campaign) {
         return (
