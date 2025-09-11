@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
   const randomRoute = Math.random() < 0.5 ? '/v2' : '/v1';
   // const randomRoute = '/p4';
 
-  // Verifique se está na rota inicial para redirecionamento 
+  // Verifique se está na rota inicial para redirecionamento  s
   console.log('aqui 1')
   if (url.pathname === '/') {
     console.log('aqui 2')
