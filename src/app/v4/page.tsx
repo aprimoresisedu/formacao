@@ -9,7 +9,7 @@ import { Slider2 } from "@/components/slider-2";
 import { XMarkIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface FormProps {
     searchParams: {
@@ -165,6 +165,17 @@ export default function Page({ searchParams }: FormProps) {
             push(`https://chk.eduzz.com/2337329?email=${data.email}&name=${data.name}&phone=${data.phone}&utm_term=${searchParams.utm_term}&utm_campaign=${searchParams.utm_campaign}&utm_source=utm_source=${searchParams.utm_source}&utm_content=${searchParams.utm_content}&utm_medium=${searchParams.utm_medium}`)
         }).catch(e => console.log(e))
     }
+
+    useEffect(() => {
+
+        if (isOpen) {
+
+            document.getElementsByTagName('body')[0].classList.add('overflow-hidden')
+        } else {
+
+            document.getElementsByTagName('body')[0].classList.remove('overflow-hidden')
+        }
+    }, [isOpen])
 
     return (
         <>
