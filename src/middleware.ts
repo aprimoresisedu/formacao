@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const url = request.nextUrl.clone();
+  const url = request.nextUrl.clone(); 
   const randomRoute = Math.random() < 0.5 ? '/v2' : '/v1';
   // const randomRoute = '/p4';
 
