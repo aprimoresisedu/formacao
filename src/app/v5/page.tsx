@@ -158,7 +158,12 @@ export default function Page({ searchParams }: FormProps) {
             },
             body: JSON.stringify({
                 ...data,
-                phone: formatPhoneToE164(data.phone)
+                phone: formatPhoneToE164(data.phone),
+                utm_source: searchParams.utm_source,
+                utm_campaign: searchParams.utm_campaign,
+                utm_medium: searchParams.utm_medium,
+                utm_content:searchParams.utm_content,
+                utm_term: searchParams.utm_term,
             })
         }).then(() => {
 
