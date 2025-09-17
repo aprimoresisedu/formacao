@@ -1,9 +1,9 @@
 "use client"
 
-import { ReactNode } from "react"
+import { ReactNode, useState } from "react"
 import Script from "next/script"
-import Button from "./button"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 interface HeaderProps {
     searchParams: {
@@ -28,6 +28,10 @@ export default function HeaderVSL({
     items,
     btn,
 }: HeaderProps) {
+
+    const [isLoading, setIsLoading] = useState(false)
+    const { push } = useRouter()
+
     return (
         <header className="sm:min-h-screen flex sm:items-start justify-center border-b-4 border-[#c4ecf4] px-4 pt-12 pb-6 bg-[#f2f2f2]">
             <div className="w-full max-w-7xl flex flex-col items-center">
@@ -64,13 +68,32 @@ export default function HeaderVSL({
                         className="sm:rounded-2xl rounded-xl sm:w-[720px] sm:h-[360px] w-full h-[240px]"
                     ></iframe>
 
-                    <div className="w-full max-w-xl flex flex-col gap-4 items-center">
-                        <a
-                            className={`w-full sm:px-20 px-4 py-5 font-bold uppercase rounded-xl bg-[#05c8b5] text-white`}
-                            href={`#inscricao`}
-
-                        >Quero ver valores
-                        </a>
+                    <div className="w-full max-w-xl flex flex-col gap-2 items-center">
+                        <p className="text-sm">Para participar da Formação DONA do Plantão, aperte no botão abaixo</p>
+                        <button
+                            className={`w-full sm:px-20 px-4 py-5 flex justify-center font-bold uppercase rounded-xl bg-[#05c8b5] text-white`}
+                            onClick={() => {
+                                setIsLoading(true)
+                                fetch('https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY1MDYzMjA0Mzc1MjZlNTUzMDUxM2Ii_pc', {
+                                    method: "POST",
+                                    headers: {
+                                        "Accept": "application/json",
+                                        "Content-Type": "application/json"
+                                    },
+                                    body: JSON.stringify({})
+                                }).then(() => {
+                                    
+                                    setIsLoading(false)
+                                    push(`/v4`)
+                                }).catch(e => console.log(e))
+                            }}
+                        >
+                            {isLoading ? (
+                                <div className="w-5 h-5 border-2 border-t-emerald-800 border-emerald-200 rounded-full animate-spin" />
+                            ) : (
+                                <span>QUERO PARTICIPAR DA FORMAÇÃO</span>
+                            )}
+                        </button>
                     </div>
 
                     <Script
@@ -92,6 +115,6 @@ export default function HeaderVSL({
                     />
                 </div>
             </div>
-        </header>
+        </header >
     )
 }
