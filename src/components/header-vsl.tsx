@@ -1,6 +1,6 @@
 "use client"
 
-import { ReactNode, useState } from "react"
+import { ReactNode } from "react"
 import Script from "next/script"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
@@ -21,15 +21,12 @@ interface HeaderProps {
 }
 
 export default function HeaderVSL({
-    searchParams,
-    price,
     title,
     subtitle,
     items,
-    btn,
 }: HeaderProps) {
 
-    const [isLoading, setIsLoading] = useState(false)
+    // const [isLoading, setIsLoading] = useState(false)
     const { push } = useRouter()
 
     return (
@@ -73,26 +70,15 @@ export default function HeaderVSL({
                         <button
                             className={`w-full sm:px-20 px-4 py-5 flex justify-center font-bold uppercase rounded-xl bg-[#05c8b5] text-white`}
                             onClick={() => {
-                                setIsLoading(true)
-                                fetch('https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY1MDYzMjA0Mzc1MjZlNTUzMDUxM2Ii_pc', {
-                                    method: "POST",
-                                    headers: {
-                                        "Accept": "application/json",
-                                        "Content-Type": "application/json"
-                                    },
-                                    body: JSON.stringify({})
-                                }).then(() => {
-                                    
-                                    setIsLoading(false)
-                                    push(`/v4`)
-                                }).catch(e => console.log(e))
+                                // setIsLoading(true)
+                                push(`/v4`)
                             }}
                         >
-                            {isLoading ? (
+                            {/* {isLoading ? (
                                 <div className="w-5 h-5 border-2 border-t-emerald-800 border-emerald-200 rounded-full animate-spin" />
-                            ) : (
-                                <span>QUERO PARTICIPAR DA FORMAÇÃO</span>
-                            )}
+                            ) : ( */}
+                            <span>QUERO PARTICIPAR DA FORMAÇÃO</span>
+                            {/* )} */}
                         </button>
                     </div>
 

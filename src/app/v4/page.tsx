@@ -149,6 +149,18 @@ export default function Page({ searchParams }: FormProps) {
             return
         }
 
+        fetch('https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTY1MDYzMjA0Mzc1MjZlNTUzMDUxM2Ii_pc', {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                ...data,
+                phone: formatPhoneToE164(data.phone)
+            })
+        })
+
         fetch(`https://services.leadconnectorhq.com/hooks/V4asAT7IrV5IdErLl2Fr/webhook-trigger/d8930375-d577-4610-85de-d394a6bed320`, {
             method: "POST",
             headers: {
